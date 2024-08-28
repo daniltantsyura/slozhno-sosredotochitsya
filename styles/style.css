@@ -1,13 +1,14 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  font-family: 'IBM Plex mono';
+  font-family: 'IBM Plex mono', monospace;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   display: grid;
   gap: 40px;
+  background-image: var(--background);
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
@@ -28,7 +29,8 @@ h4.title-decor {
 }
 
 .decorated-zone {
-  block-size: clamp(41.75rem, 20.5191rem + 90.5852vw, 64rem);
+  min-block-size: 668px;
+  block-size: 100vh;
   position: relative;
 }
 
@@ -60,6 +62,7 @@ h4.title-decor {
 
 
 .header__decorative-element {
+  display: var(--display-rec);
   font-size: 18px;
   text-transform: uppercase;
   color: var(--accent-color);
@@ -95,6 +98,7 @@ h4.title-decor {
 }
 
 .header__theme-menu-button {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -139,7 +143,7 @@ h4.title-decor {
   gap: clamp(3.125rem, 1.3359rem + 7.6336vw, 5rem);
 }
 
-.content__section {
+.section {
   display: grid;
   gap: 20px;
 }
@@ -158,6 +162,10 @@ h4.title-decor {
   font-size: 18px;
   font-weight: 400;
   color: var(--text-color);
+}
+
+.text__title {
+  margin-block-end: 10px;
 }
 
 .text__link {
@@ -181,6 +189,7 @@ h4.title-decor {
 }
 
 .gallery__images {
+  font-size: 0;
   display: grid;
   gap: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
 }
@@ -207,10 +216,6 @@ h4.title-decor {
 }
 
 @media (min-width: 768px) {
-  .decorated-zone {
-    block-size: clamp(48rem, 112rem + -100vw, 64rem);
-  }
-
   .header__title, .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
@@ -219,7 +224,7 @@ h4.title-decor {
     inline-size: clamp(22.75rem, -1.0625rem + 49.6094vw, 30.6875rem);
   }
 
-  .right-section {
+  .section-why, .section-advices {
     grid-template-columns: 1fr 2fr;
   }
 
@@ -259,7 +264,7 @@ h4.title-decor {
     align-self: center;
   }
 
-  .content__section:nth-child(2) .section__text {
+  .columns-section .section__text {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }

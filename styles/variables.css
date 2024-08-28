@@ -3,6 +3,7 @@
   и их переопределение под различные устройства
 */
 :root{
+  --display-rec: block;
   --accent-color: #FF0070;
   --transparent-border-color: #FF007066;
   --title-color: #DB00FF;
@@ -12,4 +13,5 @@
   --border-color: var(--accent-color);
   --title-shadow-color: var(--accent-color);
   --section-title-color: var(--accent-color);
+  --background:url(../images/cover-image-dark.png);
 }
