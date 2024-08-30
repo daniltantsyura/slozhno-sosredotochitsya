@@ -39,13 +39,7 @@
     --title-shadow-color: var(--accent-color);
     --title-decor-color: #353430;
     --section-title-color: var(--text-color);
-  }
-
-  .page {
-    background-image: url(../images/cover-image-light.png);
-  }
-
-  .header__decorative-element {
-    display: none;
+    --background: url(../images/cover-image-light.png);
+    --display-rec: none;
   }
 }
